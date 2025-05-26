@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config(); // تحميل متغيرات البيئة من .env
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // مفتاح JWT السري من ملف .env
 const JWT_SECRET = process.env.JWT_SECRET;
